@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      import-check:
+        enabled: false
+  datasource:
+    url: ${pizzadbURL}
+    username: ${pizzadbUsername}
+    password: ${pizzadbPassword}
+    driver-class-name: org.postgresql.Driver
